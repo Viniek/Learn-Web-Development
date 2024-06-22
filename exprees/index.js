@@ -1,24 +1,10 @@
 import express, { request, response } from 'express';
-
 const app = express();
+import users from './data.js';
 
-const users=[
-  {
-    id:1,
-    firstname:"Victory",
-    Lastname:"Njeri",
-    Email:"njerivictory52@gmail.com",
-  },
-  {
-    id:2,
-    firstname:"Vee",
-    Lastname:"Njee",
-    Email:"njerivictory94@gmail.com",
-  }
-]
 
 function getusers(req,res){
-  res.status(200).json(users);
+  res.status(201).json(users);
 }
 app.get("/users",getusers)
 

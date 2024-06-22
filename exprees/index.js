@@ -5,6 +5,12 @@ import users from './data.js';
 app.get("/users/:user_id",(req,res)=>{
   const user=users.filter(user=>user.id==req.params_id)
   res.send("user");
+  if(user.length===0){
+    res.status(404).send("invalid user...")
+  }
+  else{
+    res.status(200).send(user);
+  }
 })
 
 //status 

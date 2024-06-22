@@ -2,11 +2,16 @@ import express, { request, response } from 'express';
 const app = express();
 import users from './data.js';
 
+app.get("/users/:id",(req,res)=>{
+  console.log(req.params)
+  res.send("Loading users ...")
+})
 
-function getusers(req,res){
-  res.status(201).json(users);
-}
-app.get("/users",getusers)
+//status 
+// function getusers(req,res){
+//   res.status(201).json(users);
+// }
+// app.get("/users",getusers)
 
 // function getmusic(req,res){
 //   res.send("Retrieve music")

@@ -6,7 +6,7 @@ function getmusic(req,res){
   res.send("Retrieve music")
 }
 app.get("/music",getmusic)
-/////////////////////////////////////
+/////////////////////////////////////////////
 function updatemusic(req,res){
   res.send("Update music")
 }
@@ -23,9 +23,10 @@ function deletemusic(req,res){
 app.delete("/music",deletemusic)
 /////////////////////////////////
 function getmovies(req,res){
-  res.json({data:["terminal list","game of thrones","Nikita","Prison Break"]})
+  res.json({success:true, data:["terminal list","game of thrones","Nikita","Prison Break"]})
 }
 app.get("/movies",getmovies)
+/////////////////////////////////
 
 app.listen(3000, () => {
   console.log("App running on port 3000...");

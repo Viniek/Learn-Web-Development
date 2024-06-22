@@ -2,9 +2,9 @@ import express, { request, response } from 'express';
 const app = express();
 import users from './data.js';
 
-app.get("/users/:id",(req,res)=>{
-  console.log(req.params)
-  res.send("Loading users ...")
+app.get("/users/:user_id",(req,res)=>{
+  const user=users.filter(user=>user.id==req.params_id)
+  res.send("user");
 })
 
 //status 

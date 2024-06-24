@@ -12,4 +12,15 @@ const emails=names.map((currentElement)=>{
 })
 console.log(emails)
 // filter
-const namesThatStart
+const namesThatStartWithV=names.filter((currentElement)=>{
+ return currentElement[0] ==='V' 
+})
+console.log(namesThatStartWithV);
+
+const grades=[{name:"vee",grade:'A'},{name:"njee",grade:"A+"}]
+const studentsWithA=grades.filter((currentElement)=>{
+return currentElement.grade==='A'
+})
+console.log(grades);
+console.log(studentsWithA);
+

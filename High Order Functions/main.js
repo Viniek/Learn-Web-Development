@@ -29,3 +29,9 @@ const sum=numbers.reduce((accumulator,currentValue)=>{
     console.log( accumulator);
     return accumulator+currentValue;
 },0)
+// some
+const gradess=[{name:"vee",grade:'A'},{name:"njee",grade:"A+"}]
+const theAs=gradess.some((currentElement)=>{
+    return currentElement.gradess==="A";
+})
+console.log(theAs);

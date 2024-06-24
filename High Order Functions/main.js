@@ -16,11 +16,16 @@ const namesThatStartWithV=names.filter((currentElement)=>{
  return currentElement[0] ==='V' 
 })
 console.log(namesThatStartWithV);
-
+    // filter grades
 const grades=[{name:"vee",grade:'A'},{name:"njee",grade:"A+"}]
 const studentsWithA=grades.filter((currentElement)=>{
 return currentElement.grade==='A'
 })
 console.log(grades);
 console.log(studentsWithA);
-
+// reduce
+const numbers=[1,2,3,4,5]
+const sum=numbers.reduce((accumulator,currentValue)=>{
+    console.log( accumulator);
+    return accumulator+currentValue;
+},0)

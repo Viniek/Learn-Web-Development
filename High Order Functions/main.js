@@ -35,3 +35,8 @@ const theAs=gradess.some((currentElement)=>{
     return currentElement.gradess==="A";
 })
 console.log(theAs);
+// every
+const everyA=grades.every((currentElement)=>{
+    return currentElement.grades==='A'
+})
+console.log(everyA);

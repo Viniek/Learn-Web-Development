@@ -3,8 +3,9 @@ const app = express();
 import users from './data.js';
 
 app.get("/users/:user_id",(req,res)=>{
-  const user=users.filter(user=>user.id==req.params_id)
-  res.send("user");
+  // const user=users.filter(user=>user.id==req.params_id)
+  console.log(req.params)
+  res.send(user);
   if(user.length===0){
     res.status(404).send("invalid user...")
   }

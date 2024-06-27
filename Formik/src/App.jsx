@@ -9,17 +9,7 @@ function App() {
 
   return (
     <>
-    <div form>
-    <form>
-    <label htmlFor='firstname'>Firstname</label>
-    <input type="text"  id="firstname" />
-    <label htmlFor='lastname'>lastname</label>
-    <input type="text"  id="lastname" />
-    <label htmlFor='emailaddress'>emailaddress</label>
-    <input type="text"  id="emailaddress" />
-    <button>submit</button>
-    </form>
-      </div>  
+    <Form/>
     </>
   )
 }

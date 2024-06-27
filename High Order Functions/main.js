@@ -40,3 +40,8 @@ const everyA=grades.every((currentElement)=>{
     return currentElement.grades==='A'
 })
 console.log(everyA);
+// find
+const vee=grades.find((currentElement)=>{
+    return currentElement.name==="vee"
+})
+console.log(vee);

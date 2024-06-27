@@ -10,11 +10,9 @@ const formik=useFormik({
     emailadress:null
   }
 })
+console.log(formik.values)
 
-    const [firstname,setfirstname]=useState(null)
-    const[lastname,setlastname]=useState(null)
-    const[emailadress,setemailadress]=useState(null)
-
+  
     const handleSubmit= e =>{
         e.preventDefault();
         if(firstname.length<4&& !firstname)alert("Enter a valid Firstname")
@@ -24,13 +22,13 @@ const formik=useFormik({
     <div form>
     <form>
     <label htmlFor='firstname'>Firstname</label>
-    <input type="text"  id="firstname" onchange={(e)=>setfirstname(e.firstname.value)} />
+    <input type="text" name='firstname'  id="firstname"  value={formik.values.firstname} onchange={formik.handleChange}/>
 
     <label htmlFor='lastname'>lastname</label>
-    <input type="text"  id="lastname" onchange={(e)=>setlastname(e.lastname.value)} />
+    <input type="text"  name='lastname' id="lastname" value={formik.values.lastname}  onchange={formik.handleChange}/>
      
     <label htmlFor='emailaddress'>emailaddress</label>
-    <input type="text"  id="emailaddress" onchange={(e)=>setemailadress(e.emailadress.value)} />
+    <input type="text" name='emailaddress' id="emailaddress" value={formik.values.emailadress} onchange={formik.handleChange}/>
     <button onClick={handleSubmit}>submit</button>
     </form>
       </div> 
